@@ -1,0 +1,25 @@
+﻿@Model IEnumerable<WebApplication3.Models.MailInfo>
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Index</h2>
+    <form action="/Email/Send" method="post">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">From</label>
+            <input type="text" class="form-control"  name="From">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">To</label>
+            <input type="text" class="form-control" name="To">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Subject</label>
+            <input type="text" class="form-control" name="Subject">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Body</label>
+            <textarea class="form-control" name="Body" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>

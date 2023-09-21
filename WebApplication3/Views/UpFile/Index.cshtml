@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Upload</h2>
+<form action="/UpFile/Upload" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Default file input example</label>
+        <input class="form-control" type="file" name="image">
+    </div>
+    <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+        <input class="form-control" type="file" name="document" multiple>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
