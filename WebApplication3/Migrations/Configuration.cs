@@ -1,36 +1,32 @@
 ﻿namespace WebApplication3.Migrations
 {
+    using Microsoft.Ajax.Utilities;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Runtime.Remoting.Messaging;
     using WebApplication3.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WebApplication3.Models.SchoolContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WebApplication3.Models.ProductDB>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(WebApplication3.Models.SchoolContext context)
+        protected override void Seed(WebApplication3.Models.ProductDB context)
         {
+
+            IList<Category> lstCategories = new List<Category>();
+            lstCategories.Add(new Category {NameCat = "Mobiles" });
+            lstCategories.Add(new Category {NameCat = "Laptops" });
+            lstCategories.Add(new Category {NameCat = "TVs" });
+            lstCategories.Add(new Category {NameCat = "Fans" });
+            lstCategories.Add(new Category {NameCat = "others" });
+            lstCategories.ForEach(x=> context.Categories.AddOrUpdate(x));
             base.Seed(context);
-            var lstStudents=new List<Student>();
-            lstStudents.Add(new Student() { StudentName="sdadada"});
-            lstStudents.Add(new Student() { StudentName = "sdawdsaad" });
-            lstStudents.Add(new Student() { StudentName = "adwdazda" });
-            lstStudents.Add(new Student() { StudentName = "sdawda" });
-            lstStudents.ForEach(s=> context.Students.Add(s));
-            var lstScore=new List<Grade>();
-            lstScore.Add(new Grade() { GradeName = "DADWDA", Score = 9, StudentID = 1 });
-            lstScore.Add(new Grade() { GradeName="DSADAW",Score = 2,StudentID = 1 });
-            lstScore.Add(new Grade() { GradeName="SDADWDA",Score=8, StudentID = 1 });
-            lstScore.Add(new Grade() { GradeName="SADAWDAD",Score=4,StudentID = 2 });
-            lstScore.Add(new Grade() { GradeName = "SDADA", Score = 3, StudentID = 2 });
-            lstScore.Add(new Grade() { GradeName="SDADWA",Score=-8, StudentID=2});
-            lstScore.ForEach(s=>context.Grades.Add(s));
         }
     }
 }

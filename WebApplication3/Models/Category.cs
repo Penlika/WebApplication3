@@ -7,15 +7,12 @@ using System.Web;
 
 namespace WebApplication3.Models
 {
-    public class Grade
+    public class Category
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int GradeId { get; set; }
-        public string GradeName { get; set; }
-        public double Score { get; set; }
-        [ForeignKey("Student")]
-        public int StudentID { get; set; }
-        public virtual Student Student { get; set; }
+        public int IdCat { get; set; }
+        [Required]
+        public string NameCat { get; set; }
     }
 }

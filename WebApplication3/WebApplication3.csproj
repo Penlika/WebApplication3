@@ -140,23 +140,23 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
-    <Compile Include="Controllers\GradeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UpFileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202309070834470_Well.cs" />
-    <Compile Include="Migrations\202309070834470_Well.designer.cs">
-      <DependentUpon>202309070834470_Well.cs</DependentUpon>
+    <Compile Include="Migrations\202309280947268_vcvcvc.cs" />
+    <Compile Include="Migrations\202309280947268_vcvcvc.designer.cs">
+      <DependentUpon>202309280947268_vcvcvc.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Grade.cs" />
-    <Compile Include="Models\NewForm.cs" />
-    <Compile Include="Models\SchoolContext.cs" />
-    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\HitCounterAttribute.cs" />
+    <Compile Include="Models\MailInfo.cs" />
+    <Compile Include="Models\ProductDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +185,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\admin\Views\web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -215,9 +216,13 @@
     <Content Include="Views\Email\Index.cshtml" />
     <Content Include="Views\UpFile\Index.cshtml" />
     <Content Include="Views\UpFile\Upload.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\admin\Controllers\" />
+    <Folder Include="Areas\admin\Data\" />
+    <Folder Include="Areas\admin\Views\Shared\" />
     <Folder Include="UploadFile\" />
   </ItemGroup>
   <ItemGroup>
@@ -248,8 +253,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202309070834470_Well.resx">
-      <DependentUpon>202309070834470_Well.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202309280947268_vcvcvc.resx">
+      <DependentUpon>202309280947268_vcvcvc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

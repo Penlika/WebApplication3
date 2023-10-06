@@ -1,13 +1,14 @@
-﻿@Model IEnumerable<WebApplication3.Models.MailInfo>
+﻿@model WebApplication3.Models.MailInfo
     @{
         ViewBag.Title = "Index";
     }
 
     <h2>Index</h2>
     <form action="/Email/Send" method="post">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">From</label>
-            <input type="text" class="form-control"  name="From">
+            <input type="text" class="form-control" name="From">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">To</label>
@@ -16,6 +17,7 @@
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Subject</label>
             <input type="text" class="form-control" name="Subject">
+            @Html.ValidationMessageFor((model) => model.Subject, "", new { @class = "text-danger" })
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Body</label>

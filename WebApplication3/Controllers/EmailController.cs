@@ -9,6 +9,7 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
+    [HitCounter]
     public class EmailController : Controller
     {
         // GET: Email
