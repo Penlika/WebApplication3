@@ -152,6 +152,10 @@
     <Compile Include="Migrations\202309280947268_vcvcvc.designer.cs">
       <DependentUpon>202309280947268_vcvcvc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312271224040_adsdawda.cs" />
+    <Compile Include="Migrations\202312271224040_adsdawda.designer.cs">
+      <DependentUpon>202312271224040_adsdawda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\HitCounterAttribute.cs" />
@@ -176,6 +180,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Desktop 2023.12.27 - 19.31.14.03.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -211,7 +216,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Grade\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Email\Index.cshtml" />
     <Content Include="Views\UpFile\Index.cshtml" />
@@ -255,6 +259,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202309280947268_vcvcvc.resx">
       <DependentUpon>202309280947268_vcvcvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312271224040_adsdawda.resx">
+      <DependentUpon>202312271224040_adsdawda.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
